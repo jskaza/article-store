@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+aside,
+section {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px dotted blue;
+    word-wrap: break-word;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+
+aside {
+    height: 100vh;
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html data-theme="autumn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/main.css" rel="stylesheet">
+  <script src="jquery-3.6.0.min.js"></script>
+</head>
+<div style="display:flex">
+  {{template "sidebar"}}
+  {{template "papers" .}}
+  {{template "upload_modal"}}
+</div>
+{{template "footer"}}
+
+</html>

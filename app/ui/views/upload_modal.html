@@ -1,0 +1,35 @@
+{{define "upload_modal"}}
+<iframe name="dummy-frame" id="dummy-frame" style="display: none;"></iframe>
+<input type="checkbox" id="upload-modal" class="modal-toggle" />
+<label for="upload-modal" class="modal cursor-pointer">
+    <label class="modal-box relative" for="">
+        <form id="upload-form" target="dummy-frame" action="/upload" method="POST" enctype="multipart/form-data">
+            {{/* <label class="block">
+                <span class="text-gray-700">Name</span>
+                <input name="author" type="text" class="form-input mt-1 block w-full" placeholder="Jon Skaza" />
+            </label>
+            <br> */}}
+            <label class="block">
+                <span class="text-gray-700">Title</span>
+                <input name="title" type="text" class="form-input mt-1 block w-full"
+                    placeholder="Theory of Everything" />
+            </label>
+            <br>
+            <label class="block">
+                <span class="text-gray-700">Category</span>
+                <select name="category" class="form-select block w-full mt-1">
+                    <option>Physics</option>
+                    <option>Neuroscience</option>
+                </select>
+            </label>
+            <br>
+            <label class="block">
+                <span class="text-gray-700">Select File (.md, .docx, .tex)</span>
+                <input name="uploaded-paper" type="file" accept=".docx,.md,.tex" />
+            </label>
+            <br>
+            <button class="btn" type="submit" id="submit-paper">Submit</button>
+        </form>
+    </label>
+</label>
+{{end}}

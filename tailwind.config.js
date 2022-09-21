@@ -1,8 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
+
 module.exports = {
-  content: ["./app/views/*.html"],
-  theme: {
-    extend: {},
+  content: ["./app/ui/views/*.html", "./app/ui/views/partials/*.html"],
+  daisyui: {
+    themes: ["autumn"],
   },
-  plugins: [],
+  plugins: [require("daisyui"),  require('@tailwindcss/forms')],
 }

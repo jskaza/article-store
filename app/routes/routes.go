@@ -13,7 +13,7 @@ import (
 	"github.com/jskaza/open-journal/app/utils"
 )
 
-func SetupRoutes(views, css, js string) {
+func SetupRoutes(views, css, js, favicon string) {
 	router := gin.Default()
 	router.LoadHTMLGlob(views)
 	// engine := html.New("./app/ui/views", ".html")
@@ -24,6 +24,7 @@ func SetupRoutes(views, css, js string) {
 
 	router.Static("./css", css)
 	router.Static("./js", js)
+	router.StaticFile("./favicon.ico", favicon)
 
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})

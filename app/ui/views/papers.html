@@ -1,28 +1,30 @@
 {{define "papers"}}
-<div class="overflow-x-auto w-full px-4 py-4">
-    <table class="table w-full">
-        <thead>
-            <tr>
-                <th>Peer Approvals</th>
-                <th>Author</th>
-                <th>Title</th>
+<div class="py-4 z-0">
+    <table class="table table-auto overflow-hidden z-0">
+        <thead class="z-0">
+            <tr class="z-0">
+                {{/* <th class="hidden">Peer Approvals</th> */}}
+                <th class="z-0">Title</th>
+                <th class="z-0">Author</th>
             </tr>
         </thead>
         <tbody>
             {{range .}}
             <tr onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';">
-                <td>
+                {{/* <td class="hidden">
                     {{.Approvals}}
+                </td> */}}
+                <td>
+                    {{.Title}}
                 </td>
                 <td>
                     {{/* {{.Author}} */}}
                     Jon Skaza
                 </td>
-                <td>
-                    {{.Title}}
-                </td>
+
             </tr>
             {{end}}
     </table>
+
 </div>
 {{end}}

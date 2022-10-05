@@ -40,6 +40,10 @@ func SetupRoutes(views, css, js, favicon string) {
 		c.HTML(http.StatusOK, "paper.html", paper)
 	})
 
+	router.GET("about/mission", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "mission.html", gin.H{})
+	})
+
 	router.POST("/upload", func(c *gin.Context) {
 		file, _ := c.FormFile("uploaded-paper")
 		extension := filepath.Ext(file.Filename)

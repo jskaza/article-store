@@ -7,18 +7,13 @@
   <link href="/css/main.css" rel="stylesheet">
   <script src="jquery-3.6.0.min.js"></script>
 </head>
-{{/* {{template "header"}} */}}
 
-{{template "sidebar"}}
-<div class="container mx-auto px-4 py-4">
+{{template "header"}}
+<div class="flex items-center justify-center h-screen md:grid md:grid-cols-2 md:gap-4 ">
+  {{template "navigation"}}
+  {{template "upload_modal" }}
+  {{template "mobile_navigation" }}
 </div>
-{{/* <div class="grid grid-cols-2 gap-10 px-12 py-12">
-  {{template "card" "Physics"}}
-  {{template "card" "Medicine"}}
-  {{template "card" "Biology"}}
-  {{template "card" "Neuroscience"}}
-</div> */}}
-{{template "upload_modal"}}
 
 {{template "footer"}}
 

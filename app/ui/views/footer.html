@@ -1,6 +1,13 @@
 {{define "footer"}}
 <footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    {{/*  <script src="/js/upload_modal.js"></script>  */}}
+    <script>
+        var menu = document.getElementById('menu');
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('w-full');
+            menu.classList.toggle('h-screen');
+        }
+    </script>
 </footer>
 {{end}}

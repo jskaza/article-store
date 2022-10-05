@@ -1,23 +1,26 @@
 {{define "papers"}}
-<div class="py-4 z-0">
-    <table class="table table-auto overflow-hidden z-0">
-        <thead class="z-0">
-            <tr class="z-0">
-                {{/* <th class="hidden">Peer Approvals</th> */}}
-                <th class="z-0">Title</th>
-                <th class="z-0">Author</th>
+<div class="py-4 justify-center">
+    {{/* <p class="font-semibold text-xl text-center">{{(index . 0).Category}}</p> */}}
+    <table class="md:table-auto border border-slate-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+                <th class="border border-slate-300 px-4 py-4">Approvals</th>
+                <th class="border border-slate-300 px-4 py-4">Title</th>
+                <th class="border border-slate-300 px-4 py-4">Author</th>
             </tr>
         </thead>
         <tbody>
             {{range .}}
-            <tr onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';">
-                {{/* <td class="hidden">
+            <tr class="bg-white hover:bg-primary hover:bg-gray-50"
+                onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';" onmouseover=""
+                style="cursor: pointer;">
+                <td class="border border-slate-300 px-4 py-4">
                     {{.Approvals}}
-                </td> */}}
-                <td>
+                </td>
+                <td class="border border-slate-300 px-4 py-4">
                     {{.Title}}
                 </td>
-                <td>
+                <td class="border border-slate-300 px-4 py-4">
                     {{/* {{.Author}} */}}
                     Jon Skaza
                 </td>

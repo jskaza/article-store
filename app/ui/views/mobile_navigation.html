@@ -1,0 +1,17 @@
+{{define "mobile_navigation"}}
+<ul id="menu" class="hidden fixed top-0 right-0 px-10 py-16 bg-gray-800">
+    <li class="md:hidden fixed top-4 right-6">
+        <a href="javascript:void(0)" class="text-right text-white text-4xl" onclick="toggleMenu()">&times;</a>
+    </li>
+    <li class="text-primary text-xl">npeers</li>
+    <br>
+    <li class="text-white opacity-100  text-lg">browse</li>
+    <li><a class="text-white opacity-70" href="/category/neuroscience">neuroscience</a></li>
+    <li><a class="text-white opacity-70" href="/category/physics">physics</a></li>
+    <li><a class="text-white opacity-70" href="/category/astronomy">astronomy</a></li>
+    <br>
+    <li class="text-white opacity-100 text-lg">about</li>
+    <li><a class="text-white opacity-70" href="/about/mission">our mission</a></li>
+
+</ul>
+{{end}}

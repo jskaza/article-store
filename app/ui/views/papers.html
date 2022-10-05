@@ -1,28 +1,33 @@
 {{define "papers"}}
-<div class="overflow-x-auto w-full px-4 py-4">
-    <table class="table w-full">
-        <thead>
+<div class="py-4 justify-center">
+    {{/* <p class="font-semibold text-xl text-center">{{(index . 0).Category}}</p> */}}
+    <table class="md:table-auto border border-slate-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
-                <th>Peer Approvals</th>
-                <th>Author</th>
-                <th>Title</th>
+                <th class="border border-slate-300 px-4 py-4">Approvals</th>
+                <th class="border border-slate-300 px-4 py-4">Title</th>
+                <th class="border border-slate-300 px-4 py-4">Author</th>
             </tr>
         </thead>
         <tbody>
             {{range .}}
-            <tr onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';">
-                <td>
+            <tr class="bg-white hover:bg-primary hover:bg-gray-50"
+                onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';" onmouseover=""
+                style="cursor: pointer;">
+                <td class="border border-slate-300 px-4 py-4">
                     {{.Approvals}}
                 </td>
-                <td>
+                <td class="border border-slate-300 px-4 py-4">
+                    {{.Title}}
+                </td>
+                <td class="border border-slate-300 px-4 py-4">
                     {{/* {{.Author}} */}}
                     Jon Skaza
                 </td>
-                <td>
-                    {{.Title}}
-                </td>
+
             </tr>
             {{end}}
     </table>
+
 </div>
 {{end}}

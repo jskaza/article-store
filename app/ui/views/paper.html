@@ -7,13 +7,15 @@
   <link href="/css/main.css" rel="stylesheet">
   <script src="jquery-3.6.0.min.js"></script>
 </head>
+{{template "header"}}
 <div style="display:flex">
-  {{template "sidebar"}}
+  {{template "navigation"}}
   <div class="container mx-auto px-4 py-4">
     <p class="font-semibold text-xl text-center">{{.Title}}</p>
     <p class="text-lg text-center">{{.Author}}</p>
     {{.Content}}
     {{template "upload_modal"}}
+    {{template "mobile_navigation" }}
   </div>
 </div>
 {{template "footer"}}

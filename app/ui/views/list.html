@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-theme="autumn">
+<html data-theme="bumblebee">
 
 <head>
   <meta charset="UTF-8">
@@ -7,10 +7,13 @@
   <link href="/css/main.css" rel="stylesheet">
   <script src="jquery-3.6.0.min.js"></script>
 </head>
-<div style="display:flex">
-  {{template "sidebar"}}
+{{template "header"}}
+
+<div class="flex items-center justify-center h-screen md:grid md:grid-cols-2 md:gap-4 ">
+  {{template "navigation"}}
   {{template "papers" .}}
-  {{template "upload_modal"}}
+  {{template "upload_modal" }}
+  {{template "mobile_navigation" }}
 </div>
 {{template "footer"}}
 

@@ -8,9 +8,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/jskaza/open-journal/app/controllers"
-	"github.com/jskaza/open-journal/app/models"
-	"github.com/jskaza/open-journal/app/utils"
+	"github.com/jskaza/article-store/app/controllers"
+	"github.com/jskaza/article-store/app/models"
+	"github.com/jskaza/article-store/app/utils"
 )
 
 func SetupRoutes(views, css, js, favicon string) {

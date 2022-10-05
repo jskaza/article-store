@@ -1,4 +1,4 @@
-module github.com/jskaza/open-journal
+module github.com/jskaza/article-store
 
 go 1.18
 

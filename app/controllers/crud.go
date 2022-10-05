@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jskaza/open-journal/app/models"
+	"github.com/jskaza/article-store/app/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

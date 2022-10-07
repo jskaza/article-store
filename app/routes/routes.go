@@ -3,6 +3,7 @@ package routes
 import (
 	"io/ioutil"
 	"net/http"
+	"os"
 	"path/filepath"
 	"strings"
 
@@ -50,14 +51,19 @@ func SetupRoutes(views, css, js, favicon string) {
 		uuid := uuid.New().String()
 		c.SaveUploadedFile(file, uuid+extension)
 		utils.ParsePaper(uuid, extension)
+		os.Remove(uuid + extension)
 		content, _ := ioutil.ReadFile(uuid + ".html")
 		category := strings.ToLower(c.PostForm("category"))
 		paper := models.Paper{
 			// Author:   controllers.GetName(), // hard code for now,
 			Title:    c.PostForm("title"),
+			Author:   c.PostForm("author"),
 			Category: category,
+			Abstract: c.PostForm("abstract"),
 			Content:  string(content)}
+		os.Remove(uuid + ".html")
 		controllers.InsertPaper(paper)
+
 		// need middleware to redirect
 		// id, _ := controllers.InsertPaper(paper)
 		// c.Redirect(http.StatusMovedPermanently, "/category/"+category+"/paper/"+id)

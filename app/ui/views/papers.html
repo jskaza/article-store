@@ -1,33 +1,21 @@
 {{define "papers"}}
-<div class="py-4 justify-center">
-    {{/* <p class="font-semibold text-xl text-center">{{(index . 0).Category}}</p> */}}
-    <table class="md:table-auto border border-slate-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-            <tr>
-                <th class="border border-slate-300 px-4 py-4">Approvals</th>
-                <th class="border border-slate-300 px-4 py-4">Title</th>
-                <th class="border border-slate-300 px-4 py-4">Author</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{range .}}
-            <tr class="bg-white hover:bg-primary hover:bg-gray-50"
-                onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';" onmouseover=""
-                style="cursor: pointer;">
-                <td class="border border-slate-300 px-4 py-4">
-                    {{.Approvals}}
-                </td>
-                <td class="border border-slate-300 px-4 py-4">
-                    {{.Title}}
-                </td>
-                <td class="border border-slate-300 px-4 py-4">
-                    {{/* {{.Author}} */}}
-                    Jon Skaza
-                </td>
-
-            </tr>
-            {{end}}
-    </table>
-
+<div class="py-10 px-16">
+    <span class="font-semibold text-primary text-xl text-left uppercase px-4">{{(index . 0).Category}}</span>
+    {{/* <table class="md:table-auto border border-slate-400"> */}}
+        <table class="md:table-auto text-left">
+            {{/* <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th class="border border-slate-300 px-4 py-4">Approvals</th>
+                    <th class="border border-slate-300 px-4 py-4">Abstract</th>
+                    <th class="border border-slate-300 px-4 py-4">Title</th>
+                    <th class="border border-slate-300 px-4 py-4">Author</th>
+                </tr>
+            </thead> */}}
+            <tbody>
+                {{range .}}
+                {{template "paper_entry" .}}
+                {{end}}
+            </tbody>
+        </table>
 </div>
 {{end}}

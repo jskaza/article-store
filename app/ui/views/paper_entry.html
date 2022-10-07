@@ -1,0 +1,11 @@
+{{define "paper_entry"}}
+<tr class="bg-white hover:bg-primary hover:bg-gray-50"
+    onclick="window.location='/category/{{.Category}}/paper/{{.HexID}}';" onmouseover="" style="cursor: pointer;">
+    <td class="py-4 px-4">
+        <p class="font-semibold text-lg">{{.Title}}</p>
+        <p><span class="font-semibold">Author:</span> {{.Author}}</p>
+        <p><span class="font-semibold">Abstract:</span> {{.Abstract}}</p>
+        <p><span class="font-semibold">Upvotes:</span> {{.Approvals}}</p>
+    </td>
+</tr>
+{{end}}

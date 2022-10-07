@@ -13,6 +13,7 @@ type Paper struct {
 	Author    string             `bson:"author,omitempty"`
 	Content   string             `bson:"content,omitempty"`
 	Approvals int32              `bson:"approvals,omitempty"`
+	Abstract  string             `bson:"abstract,omitempty"`
 	HexID     string             `bson:"hexID,omitempty"`
 }
 
@@ -21,6 +22,7 @@ type DisplayPaper struct {
 	Category string        `bson:"category,omitempty"`
 	Author   string        `bson:"author,omitempty"`
 	Content  template.HTML `bson:"content,omitempty"`
+	Abstract string        `bson:"abstract,omitempty"`
 }
 
 type User struct {
